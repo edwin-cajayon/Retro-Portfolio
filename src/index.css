@@ -1,0 +1,243 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  /* Windows XP / Aqua inspired color palette */
+  --background: #d4d0c8;
+  --foreground: #000000;
+  --card: #ece9d8;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #0a246a;
+  --primary-foreground: #ffffff;
+  --secondary: #3a6ea5;
+  --secondary-foreground: #ffffff;
+  --muted: #c0c0c0;
+  --muted-foreground: #808080;
+  --accent: #316ac5;
+  --accent-foreground: #ffffff;
+  --destructive: #c00000;
+  --destructive-foreground: #ffffff;
+  --border: #808080;
+  --input: #ffffff;
+  --ring: #0078d7;
+  
+  /* Window chrome colors */
+  --window-title-start: #0a246a;
+  --window-title-end: #a6caf0;
+  --window-border-light: #ffffff;
+  --window-border-dark: #808080;
+  --window-border-darker: #404040;
+  --button-face: #d4d0c8;
+  --button-highlight: #ffffff;
+  --button-shadow: #808080;
+  --button-dark-shadow: #404040;
+  
+  /* Taskbar / status bar */
+  --taskbar-bg: #3a6ea5;
+  --taskbar-text: #ffffff;
+
+  --radius: 0px;
+}
+
+@theme inline {
+  --font-sans: 'Trebuchet MS', 'Tahoma', 'Verdana', 'Arial', sans-serif;
+  --font-mono: 'Courier New', 'Lucida Console', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 13px;
+  }
+}
+
+/* Classic Windows XP/2000 button styles */
+.retro-button {
+  background: linear-gradient(180deg, #f5f5f5 0%, #d4d0c8 50%, #c0c0c0 100%);
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #404040;
+  padding: 4px 16px;
+  font-family: 'Tahoma', 'Verdana', sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.retro-button:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 50%, #d4d0c8 100%);
+}
+
+.retro-button:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset -1px -1px 0 #ffffff, inset 1px 1px 0 #404040;
+  padding: 5px 15px 3px 17px;
+}
+
+/* Window title bar gradient */
+.window-titlebar {
+  background: linear-gradient(180deg, #0a246a 0%, #0f3c8a 10%, #2b71c6 50%, #4a9be8 90%, #a6caf0 100%);
+}
+
+/* Inactive window */
+.window-titlebar-inactive {
+  background: linear-gradient(180deg, #808080 0%, #a0a0a0 50%, #c0c0c0 100%);
+}
+
+/* Classic inset panel */
+.inset-panel {
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: inset 1px 1px 0 #404040;
+  background: #ffffff;
+}
+
+/* Classic outset panel / raised */
+.outset-panel {
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: inset -1px -1px 0 #404040, inset 1px 1px 0 #ffffff;
+  background: #d4d0c8;
+}
+
+/* Glossy Aqua-style button */
+.aqua-button {
+  background: linear-gradient(180deg, 
+    #6cb3f5 0%, 
+    #3a9be8 25%, 
+    #2080d8 50%, 
+    #3a9be8 75%, 
+    #6cb3f5 100%
+  );
+  border: 1px solid #1a5a9e;
+  border-radius: 12px;
+  box-shadow: 
+    0 1px 0 #ffffff inset,
+    0 -1px 0 #1a5a9e inset,
+    0 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  padding: 6px 20px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.aqua-button:hover {
+  background: linear-gradient(180deg, 
+    #8cc8ff 0%, 
+    #5ab0f5 25%, 
+    #3090e8 50%, 
+    #5ab0f5 75%, 
+    #8cc8ff 100%
+  );
+}
+
+.aqua-button:active {
+  background: linear-gradient(180deg, 
+    #3a9be8 0%, 
+    #2080d8 25%, 
+    #1a6ac0 50%, 
+    #2080d8 75%, 
+    #3a9be8 100%
+  );
+  box-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 2px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Scrollbar styling for retro feel */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d4d0c8;
+  border: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #d4d0c8 0%, #f5f5f5 50%, #d4d0c8 100%);
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #e0e0e0 0%, #ffffff 50%, #e0e0e0 100%);
+}
+
+::-webkit-scrollbar-button {
+  background: #d4d0c8;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+/* CRT Overlay Animations */
+/* Noise animation - rapid position shifting for grain effect */
+@keyframes noise-move {
+  0%, 100% { background-position: 0 0; }
+  10% { background-position: -10px -10px; }
+  20% { background-position: 10px 5px; }
+  30% { background-position: -5px 15px; }
+  40% { background-position: 15px -5px; }
+  50% { background-position: -15px 10px; }
+  60% { background-position: 5px -15px; }
+  70% { background-position: -10px 10px; }
+  80% { background-position: 10px -10px; }
+  90% { background-position: -5px 5px; }
+}
+
+.crt-noise {
+  animation: noise-move 0.15s steps(10) infinite;
+}
+
+/* Flicker animation - subtle brightness pulsing */
+@keyframes flicker {
+  0%, 100% { opacity: 0.02; }
+  50% { opacity: 0.04; }
+  25%, 75% { opacity: 0.015; }
+}
+
+.crt-flicker {
+  animation: flicker 0.15s ease-in-out infinite;
+}
+
+/* Chromatic aberration subtle shift */
+@keyframes chromatic-shift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(1px); }
+}
+
+.crt-chromatic {
+  animation: chromatic-shift 0.1s steps(2) infinite;
+}
