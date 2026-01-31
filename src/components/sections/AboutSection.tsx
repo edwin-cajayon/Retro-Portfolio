@@ -1,27 +1,6 @@
 import React from "react"
 import { Window } from '../Window'
-import { User, Calendar, MapPin, GraduationCap, Briefcase } from 'lucide-react'
-
-const experiences = [
-  {
-    title: 'Senior Software Engineer',
-    company: 'TechCorp Inc.',
-    period: '2022 - Present',
-    description: 'Leading frontend development team, architecting scalable React applications.',
-  },
-  {
-    title: 'Software Developer',
-    company: 'StartupXYZ',
-    period: '2020 - 2022',
-    description: 'Built full-stack features using React, Node.js, and PostgreSQL.',
-  },
-  {
-    title: 'Junior Developer',
-    company: 'WebAgency',
-    period: '2019 - 2020',
-    description: 'Developed responsive websites and maintained client projects.',
-  },
-]
+import { User, MapPin, GraduationCap, Briefcase } from 'lucide-react'
 
 export function AboutSection() {
   return (

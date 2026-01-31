@@ -5,7 +5,7 @@ import React from "react"
 import { useState } from 'react'
 import { Window } from '../Window'
 import { RetroButton } from '../RetroButton'
-import { Mail, Send, Github, Linkedin, Twitter, Globe } from 'lucide-react'
+import { Mail, Send, Github, Linkedin } from 'lucide-react'
 
 const socialLinks = [
   { icon: Github, label: 'GitHub', url: 'https://github.com/edwin-cajayon', username: 'edwin-cajayon' },

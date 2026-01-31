@@ -1,6 +1,5 @@
 import React from "react"
 import { Window } from "../Window"
-import Image from "next/image"
 
 const projects = [
   {
@@ -92,11 +91,9 @@ function ProjectCard({
       <div className="p-3 bg-white">
         {/* Screenshot */}
         <div className="inset-panel mb-3 overflow-hidden">
-          <Image
+          <img
             src={image || "/placeholder.svg"}
             alt={`Screenshot of ${title}`}
-            width={320}
-            height={180}
             className="w-full h-36 object-cover"
           />
         </div>
